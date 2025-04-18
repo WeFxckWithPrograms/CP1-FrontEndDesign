@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(190, 190, 190);
+    background-color: rgba(255, 255, 255, 0.432);
 }
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* imagen do background de vinho */
 .imagemPrincipal {
     width: 100vw;        /* largura da tela */
     height: auto;        /* mantém a proporção da imagem */
@@ -13,10 +19,8 @@ body{
     object-fit: cover;   /* cobre bem a área da imagem */
     margin: 0 auto;      /* centraliza, caso precise */
 }
-.imagemPrincipal {
-    width: 100vw;
-    display: block;
-}
+
+/* placement da escrita */
 .textoSobreImagem {
     position: absolute;
     top: 40px;        /* distância do topo */
@@ -29,13 +33,39 @@ body{
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 5px;
-
 }
+
+/* botao do carrinho */
+.btncarrinho {
+    --hover-color: #0000008f;
+    position: absolute;
+    top: 43px;        /* distância do topo */
+    right: 320px;      /* distância da direita */
+    color: white;
+    text-align: right; /* fundo levemente escuro */
+    padding: 9px 17px;
+    border-radius: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    border-color: transparent;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+}
+.btncarrinho:hover{
+    background-color: var(--hover-color);
+}
+
+/* botao sobre nos */
 .btnabtus {
     --hover-color: #0000008f;
     position: absolute;
     top: 43px;        /* distância do topo */
-    right: 165px;      /* distância da direita */
+    right: 155px;      /* distância da direita */
     color: white;
     text-align: right; /* fundo levemente escuro */
     padding: 9px 17px;
@@ -53,8 +83,9 @@ body{
 }
 .btnabtus:hover{
     background-color: var(--hover-color);
-
 }
+
+/* botao de login */
 .btnlogin {
     --primary-color: #0000008f;
     --secondary-color: #fff;
@@ -115,6 +146,8 @@ body{
 .btnlogin:hover .arrow:before {
     right: 0;
 }
+
+/* imagens */
 img.img-vinho1{
     width: 325px;
     border-radius: 20px;
@@ -124,18 +157,77 @@ img.img-vinho1{
     position: absolute;
     z-index: 1;
 }
+img.img-vinho2{
+    width: 325px;
+    border-radius: 20px;
+    top: 330px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+}
+img.img-vinho3{
+    width: 325px;
+    border-radius: 20px;
+    top: 330px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+}
+img.img-vinho4{
+    width: 325px;
+    border-radius: 20px;
+    top: 330px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 1;
+}
+
+/* blocos de vinho */
 .vinho1{
     padding: 1;
     margin: 1;
-    width: 50vh;
+    width: 45vh;
     height: 80vh;
     background-color: transparent;
-    left: 50px;
-    top: 170px;
+    left: 70px;
+    top: 210px;
     position: absolute;
-    border-radius: 20px;
-    
 }
+.vinho2{
+    padding: 1;
+    margin: 1;
+    width: 45vh;
+    height: 80vh;
+    background-color: transparent;
+    left: 510px;
+    top: 210px;
+    position: absolute;
+}
+.vinho3{
+    padding: 1;
+    margin: 1;
+    width: 45vh;
+    height: 80vh;
+    background-color: transparent;
+    right: 510px;
+    top: 210px;
+    position: absolute;
+}
+.vinho4{
+    padding: 1;
+    margin: 1;
+    width: 45vh;
+    height: 80vh;
+    background-color: transparent;
+    right: 70px;
+    top: 210px;
+    position: absolute;
+}
+
+/* botao saiba mais produtos*/
 .saibamais1{
     position: absolute;
     top: 650px;
@@ -145,63 +237,116 @@ img.img-vinho1{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.saibamais2{
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 23px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.saibamais3{
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 23px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.saibamais4{
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 23px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* preco produtos */
 .preco1{
     position: absolute;
-    top:95px;
-    left: 85px;
+    top: 95px;
+    left: 60px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     z-index: 1;
     letter-spacing: -1px;
     padding: 5px 10px;
     background-color: #2222228e;
     border-radius: 20px;
 }
+.preco2{
+    position: absolute;
+    top: 100px;
+    left: 62px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    letter-spacing: -1px;
+    padding: 5px 10px;
+    background-color: #2222228e;
+    border-radius: 20px;
+}
+.preco3{
+    position: absolute;
+    top:100px;
+    left: 62px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    letter-spacing: -1px;
+    padding: 5px 10px;
+    background-color: #2222228e;
+    border-radius: 20px;
+}
+.preco4{
+    position: absolute;
+    top:100px;
+    left: 62px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    letter-spacing: -1px;
+    padding: 5px 10px;
+    background-color: #2222228e;
+    border-radius: 20px;
+}
+
+/* destaque */
 h3{
     position: absolute;
-    top: 20px;
     color: rgb(0, 0, 0);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    top: 50px;
+    top: 185px;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 35px;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
 }
-h4{
+
+/* setas */
+.leftarrow{
     position: absolute;
-    top: 175px;
-    left: 50%;
-    transform: translate(-50%,-50%) ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    letter-spacing: 2.5px;
+    top: 102px;
+    left: 703px;
+    width: 230px;
 }
-.vinho2{
-    padding: 1;
-    margin: 1;
-    width: 50vh;
-    background-color: rgb(231, 144, 144);
-    display: none;
+.rightarrow{
+    position: absolute;
+    top: 102px;
+    right: 706px;
+    width: 230px;
+    z-index: 1;
+}
 
-}
-.vinho3{
-    padding: 1;
-    margin: 1;
-    width: 50vh;
-    background-color: rgb(230, 111, 111);
-    display: none;
-
-}
-.vinho4{
-    padding: 1;
-    margin: 1;
-    width: 50vh;
-    background-color: rgb(233, 84, 84);
-    display: none;
-
-}
+/* botao vinho1 */
 .btnvinho1 {
     --width: 100px;
     --height: 35px;
@@ -269,5 +414,218 @@ h4{
     top: -100%;
 } 
 .btnvinho1:hover .icon {
+    top: 0;
+}
+
+/* botao vinho2 */
+.btnvinho2 {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    top: 610px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 15px;
+    font-family: "Arial";
+    transition: background 0.3s;
+    cursor: pointer;
+}
+.btnvinho2::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+.text {
+    top: 0
+}
+.text,.icon {
+    transition: top 0.5s;
+}
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+.btnvinho2:hover .text {
+    top: -100%;
+} 
+.btnvinho2:hover .icon {
+    top: 0;
+}
+
+/* botao vinho3 */
+.btnvinho3 {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    top: 610px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 15px;
+    font-family: "Arial";
+    transition: background 0.3s;
+    cursor: pointer;
+}
+.btnvinho3::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+.text {
+    top: 0
+}
+.text,.icon {
+    transition: top 0.5s;
+}
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+.btnvinho3:hover .text {
+    top: -100%;
+} 
+.btnvinho3:hover .icon {
+    top: 0;
+}
+
+/* botao vinho4 */
+.btnvinho4 {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    top: 610px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 15px;
+    font-family: "Arial";
+    transition: background 0.3s;
+    cursor: pointer;
+}
+.btnvinho4::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+.text {
+    top: 0
+}
+.text,.icon {
+    transition: top 0.5s;
+}
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+.btnvinho4:hover .text {
+    top: -100%;
+} 
+.btnvinho4:hover .icon {
     top: 0;
 }
