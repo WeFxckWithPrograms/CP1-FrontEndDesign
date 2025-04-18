@@ -227,25 +227,125 @@ img.img-vinho4{
     position: absolute;
 }
 
-/* botao saiba mais produtos*/
-.saibamais1{
-    position: absolute;
-    top: 650px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 23px;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* botao saiba mais 1*/
+.tooltip-container1 {
+    position: relative;
+    display: inline-block;
 }
-.saibamais2{
+
+.tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 8px;
     position: absolute;
-    top: 650px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 23px;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 1;
+    bottom: 125%; /* Posiciona acima do link */
+    left: 50px;
+    top: 125px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    height: 255px;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-container1:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.saibamais1 {
+    /* Seus estilos existentes para o link */
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    color: black;
+    top: 590px;
+    left: 145px;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    white-space: nowrap;
+    display: inline-block;
+} 
+
+
+/* botão saiba mais 2*/
+.tooltip-container2 {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 14px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posiciona acima do link */
+    left: 50px;
+    top: 125px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    height: 255px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-container2:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.saibamais2 {
+    /* Seus estilos existentes para o link */
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    color: black;
+    top: 590px;
+    left: 145px;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    white-space: nowrap;
+    display: inline-block;
+} 
+
 .saibamais3{
     position: absolute;
     top: 650px;
