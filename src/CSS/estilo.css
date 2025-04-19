@@ -1,97 +1,34 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 body{
-    background-color: rgba(255, 255, 255, 0.432);
+    background: #f4f4f4;
 }
-.cabecalho{
+
+#container{
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+    z-index: 1;
+    display: block;
     justify-content: space-between;
 }
-
-/* imagen do background de vinho */
-.imagemPrincipal {
-    width: 100vw;        /* largura da tela */
-    height: auto;        /* mantém a proporção da imagem */
-    display: block;
-    object-fit: cover;   /* cobre bem a área da imagem */
-    margin: 0 auto;      /* centraliza, caso precise */
-}
-
-/* placement da escrita */
-.textoSobreImagem {
-    position: absolute;
-    top: 40px;        /* distância do topo */
-    left: 20px;      /* distância da direita */
-    color: white;
-    text-align: right; /* fundo levemente escuro */
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 5px;
-}
-
-/* botao do carrinho */
-.btncarrinho {
-    --hover-color: #0000008f;
-    position: absolute;
-    top: 43px;        /* distância do topo */
-    right: 320px;      /* distância da direita */
-    color: white;
-    text-align: right; /* fundo levemente escuro */
-    padding: 9px 17px;
-    border-radius: 60px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 1px;
-    border-color: transparent;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
-    background: var(--primary-color);
-    display: flex;
-    transition: 0.2s background;
-}
-.btncarrinho:hover{
-    background-color: var(--hover-color);
-}
-
-/* botao sobre nos */
-.btnabtus {
-    --hover-color: #0000008f;
-    position: absolute;
-    top: 43px;        /* distância do topo */
-    right: 155px;      /* distância da direita */
-    color: white;
-    text-align: right; /* fundo levemente escuro */
-    padding: 9px 17px;
-    border-radius: 60px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 1px;
-    border-color: transparent;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
-    background: var(--primary-color);
-    display: flex;
-    transition: 0.2s background;
-}
-.btnabtus:hover{
-    background-color: var(--hover-color);
-}
-
-/* botao de login */
 .btnlogin {
     --primary-color: #0000008f;
     --secondary-color: #fff;
     --hover-color: #f7543e48;
     --arrow-width: 10px;
     --arrow-stroke: 2px;
+    position: absolute;
     box-sizing: border-box;
     border: 0;
     border-radius: 30px;
@@ -104,12 +41,13 @@ body{
     gap: 0.6em;
     font-weight: bold;
     position: absolute;
-    right: 20px;
+    right: 220px;
     top: 44px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 17.5px;
     cursor: pointer;
+    width: 140px;
 }
 .btnlogin .arrow-wrapper {
     display: flex;
@@ -147,585 +85,161 @@ body{
     right: 0;
 }
 
-/* imagens */
-img.img-vinho1{
-    width: 325px;
-    border-radius: 20px;
-    top: 325px;
-    left: 50%;
-    transform: translate(-50%,-50%);
+header::before {
+    content: "";
     position: absolute;
-    z-index: 1;
-}
-img.img-vinho2{
-    width: 325px;
-    border-radius: 20px;
-    top: 330px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    z-index: 1;
-}
-img.img-vinho3{
-    width: 325px;
-    border-radius: 20px;
-    top: 330px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    z-index: 1;
-}
-img.img-vinho4{
-    width: 325px;
-    border-radius: 20px;
-    top: 330px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    z-index: 1;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* escurece o fundo */
+    z-index: -1;
 }
 
-/* blocos de vinho */
-.vinho1{
-    padding: 1;
-    margin: 1;
-    width: 45vh;
-    height: 80vh;
-    background-color: transparent;
-    left: 70px;
-    top: 210px;
-    position: absolute;
+header nav ul li a{
+    color:#fff;
+    text-transform: uppercase;
+    padding: 5px 10px;
+
 }
-.vinho2{
-    padding: 1;
-    margin: 1;
-    width: 45vh;
-    height: 80vh;
-    background-color: transparent;
-    left: 510px;
-    top: 210px;
-    position: absolute;
-}
-.vinho3{
-    padding: 1;
-    margin: 1;
-    width: 45vh;
-    height: 80vh;
-    background-color: transparent;
-    right: 510px;
-    top: 210px;
-    position: absolute;
-}
-.vinho4{
-    padding: 1;
-    margin: 1;
-    width: 45vh;
-    height: 80vh;
-    background-color: transparent;
-    right: 70px;
-    top: 210px;
-    position: absolute;
+header nav ul li a:hover{
+    text-decoration: underline 5px greenyellow;
 }
 
-/* botao saiba mais 1*/
-.tooltip-container1 {
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+
+main{
+    align-items: center;
+    justify-content: center; /* centraliza os produtos */
+    gap: 100px; /* espaçamento entre eles */
+    display: flex;
+    flex-wrap: wrap;
+}
+.produto{
     position: relative;
-    display: inline-block;
+    width: 320px;
+    height: 500px;
+    margin: 10px;
+    padding: 20px;
+    background-color: transparent;
+    color:#fff;
+    border-radius: 30px;
+    top: 130px;
 }
 
-.tooltip-text {
-    visibility: hidden;
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 15px;
-    padding: 8px;
+
+.imagemproduto{
+    position: relative;
+    max-width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 10px;
+    border-radius: 15px 15px 0px 0px;
+    z-index: -1;
+}
+
+.preco {
     position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Posiciona acima do link */
-    left: 50px;
-    top: 125px;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 14px;
-    height: 255px;
-    font-family: Arial, Helvetica, sans-serif;
+    top: 0px;
+    left: -5px;
+    padding: 10px 20px; /* espaço interno para deixar elegante */
+    background-color: rgba(0, 0, 0, 0.4); /* fundo escuro e translúcido */
+    border-radius: 15px; /* borda arredondada tipo etiqueta */
+    font-weight: 300;
+    color: #fff;
+    size: 20px;
+    width: auto;
+    display: inline-block;
+    letter-spacing: 1px;
     
 }
 
-.tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-}
-
-.tooltip-container1:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.saibamais1 {
-    /* Seus estilos existentes para o link */
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    color: black;
-    top: 590px;
-    left: 145px;
-    position: absolute;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
-    white-space: nowrap;
-    display: inline-block;
-} 
-
-
-/* botão saiba mais 2*/
-.tooltip-container2 {
+button{
     position: relative;
-    display: inline-block;
-}
-
-.tooltip-text {
-    visibility: hidden;
-    width: 200px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 15px;
-    padding: 14px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Posiciona acima do link */
-    left: 50px;
-    top: 125px;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 14px;
-    height: 255px;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-
-.tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
+    color: white;
+    background: rgb(61, 61, 61);
+    top: -10px;
     left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-}
-
-.tooltip-container2:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.saibamais2 {
-    /* Seus estilos existentes para o link */
-    text-decoration: none;
-    color: inherit;
+    transform: translate(-50%,-50%);
+    padding: 15px 45px;
+    border-radius: 20px;
     cursor: pointer;
-    color: black;
-    top: 590px;
-    left: 145px;
-    position: absolute;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
-    white-space: nowrap;
-    display: inline-block;
-} 
+    border: none;
+}
+button:hover{
+    background: #021b2b;
+    color:#fff;
 
-.saibamais3{
-    position: absolute;
-    top: 650px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 23px;
-    color: black;
+}
+
+.button-wrapper {
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.877);
+    padding: 12px 25px;
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btnvinho {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    width: 350px;
+    z-index: 2;
+    margin-left: -35px;
+}
+
+.button-wrapper:hover {
+    background-color: #525252;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.466);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.button-wrapper .icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.button-wrapper:hover .icon {
+    transform: translateX(5px);
+}
+.text{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.saibamais4{
-    position: absolute;
-    top: 650px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 23px;
-    color: black;
+.text:hover{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* preco produtos */
-.preco1{
-    position: absolute;
-    top: 95px;
-    left: 60px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    letter-spacing: -1px;
-    padding: 5px 10px;
-    background-color: #2222228e;
-    border-radius: 20px;
-}
-.preco2{
-    position: absolute;
-    top: 100px;
-    left: 62px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    letter-spacing: -1px;
-    padding: 5px 10px;
-    background-color: #2222228e;
-    border-radius: 20px;
-}
-.preco3{
-    position: absolute;
-    top:100px;
-    left: 62px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    letter-spacing: -1px;
-    padding: 5px 10px;
-    background-color: #2222228e;
-    border-radius: 20px;
-}
-.preco4{
-    position: absolute;
-    top:100px;
-    left: 62px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    letter-spacing: -1px;
-    padding: 5px 10px;
-    background-color: #2222228e;
-    border-radius: 20px;
-}
 
-/* destaque */
-h3{
-    position: absolute;
-    color: rgb(0, 0, 0);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    top: 185px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 35px;
-    letter-spacing: 0.5px;
-}
+/* responsividade */
 
-/* setas */
-.leftarrow{
-    position: absolute;
-    top: 102px;
-    left: 703px;
-    width: 230px;
-}
-.rightarrow{
-    position: absolute;
-    top: 102px;
-    right: 706px;
-    width: 230px;
-    z-index: 1;
-}
+@media(max-width:768px){
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        align-items: center;
+    }
+    header nav ul li{
+        margin: 0;
+    }
+    #conteudo{
+        grid-template-columns: 1fr;
+    }
+    aside{
+        display: none;
+        
+    }
 
-/* botao vinho1 */
-.btnvinho1 {
-    --width: 100px;
-    --height: 35px;
-    --tooltip-height: 35px;
-    --tooltip-width: 90px;
-    --gap-between-tooltip-to-button: 18px;
-    --button-color: #222;
-    --tooltip-color: #fff;
-    width: var(--width);
-    height: var(--height);
-    background: var(--button-color);
-    position: relative;
-    top: 607px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    border-radius: 15px;
-    font-family: "Arial";
-    transition: background 0.3s;
-    cursor: pointer;
-}
-.btnvinho1::before {
-    position: absolute;
-    content: attr(data-tooltip);
-    width: var(--tooltip-width);
-    height: var(--tooltip-height);
-    font-size: 0.9rem;
-    color: #fff;
-    border-radius: .25em;
-    line-height: var(--tooltip-height);
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-    left: calc(50% - var(--tooltip-width) / 2);
-}
-.text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.button-wrapper,.text,.icon {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    color: #fff;
-}
-.text {
-    top: 0
-}
-.text,.icon {
-    transition: top 0.5s;
-}
-.icon {
-    color: #fff;
-    top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.icon svg {
-    width: 24px;
-    height: 24px;
-}
-.btnvinho1:hover .text {
-    top: -100%;
-} 
-.btnvinho1:hover .icon {
-    top: 0;
-}
-
-/* botao vinho2 */
-.btnvinho2 {
-    --width: 100px;
-    --height: 35px;
-    --tooltip-height: 35px;
-    --tooltip-width: 90px;
-    --gap-between-tooltip-to-button: 18px;
-    --button-color: #222;
-    --tooltip-color: #fff;
-    width: var(--width);
-    height: var(--height);
-    background: var(--button-color);
-    position: relative;
-    top: 610px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    border-radius: 15px;
-    font-family: "Arial";
-    transition: background 0.3s;
-    cursor: pointer;
-}
-.btnvinho2::before {
-    position: absolute;
-    content: attr(data-tooltip);
-    width: var(--tooltip-width);
-    height: var(--tooltip-height);
-    font-size: 0.9rem;
-    color: #fff;
-    border-radius: .25em;
-    line-height: var(--tooltip-height);
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-    left: calc(50% - var(--tooltip-width) / 2);
-}
-.text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.button-wrapper,.text,.icon {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    color: #fff;
-}
-.text {
-    top: 0
-}
-.text,.icon {
-    transition: top 0.5s;
-}
-.icon {
-    color: #fff;
-    top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.icon svg {
-    width: 24px;
-    height: 24px;
-}
-.btnvinho2:hover .text {
-    top: -100%;
-} 
-.btnvinho2:hover .icon {
-    top: 0;
-}
-
-/* botao vinho3 */
-.btnvinho3 {
-    --width: 100px;
-    --height: 35px;
-    --tooltip-height: 35px;
-    --tooltip-width: 90px;
-    --gap-between-tooltip-to-button: 18px;
-    --button-color: #222;
-    --tooltip-color: #fff;
-    width: var(--width);
-    height: var(--height);
-    background: var(--button-color);
-    position: relative;
-    top: 610px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    border-radius: 15px;
-    font-family: "Arial";
-    transition: background 0.3s;
-    cursor: pointer;
-}
-.btnvinho3::before {
-    position: absolute;
-    content: attr(data-tooltip);
-    width: var(--tooltip-width);
-    height: var(--tooltip-height);
-    font-size: 0.9rem;
-    color: #fff;
-    border-radius: .25em;
-    line-height: var(--tooltip-height);
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-    left: calc(50% - var(--tooltip-width) / 2);
-}
-.text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.button-wrapper,.text,.icon {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    color: #fff;
-}
-.text {
-    top: 0
-}
-.text,.icon {
-    transition: top 0.5s;
-}
-.icon {
-    color: #fff;
-    top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.icon svg {
-    width: 24px;
-    height: 24px;
-}
-.btnvinho3:hover .text {
-    top: -100%;
-} 
-.btnvinho3:hover .icon {
-    top: 0;
-}
-
-/* botao vinho4 */
-.btnvinho4 {
-    --width: 100px;
-    --height: 35px;
-    --tooltip-height: 35px;
-    --tooltip-width: 90px;
-    --gap-between-tooltip-to-button: 18px;
-    --button-color: #222;
-    --tooltip-color: #fff;
-    width: var(--width);
-    height: var(--height);
-    background: var(--button-color);
-    position: relative;
-    top: 610px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    border-radius: 15px;
-    font-family: "Arial";
-    transition: background 0.3s;
-    cursor: pointer;
-}
-.btnvinho4::before {
-    position: absolute;
-    content: attr(data-tooltip);
-    width: var(--tooltip-width);
-    height: var(--tooltip-height);
-    font-size: 0.9rem;
-    color: #fff;
-    border-radius: .25em;
-    line-height: var(--tooltip-height);
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-    left: calc(50% - var(--tooltip-width) / 2);
-}
-.text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.button-wrapper,.text,.icon {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    color: #fff;
-}
-.text {
-    top: 0
-}
-.text,.icon {
-    transition: top 0.5s;
-}
-.icon {
-    color: #fff;
-    top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.icon svg {
-    width: 24px;
-    height: 24px;
-}
-.btnvinho4:hover .text {
-    top: -100%;
-} 
-.btnvinho4:hover .icon {
-    top: 0;
 }
