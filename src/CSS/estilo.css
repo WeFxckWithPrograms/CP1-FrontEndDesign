@@ -23,12 +23,11 @@ header {
     justify-content: space-between;
 }
 .btnlogin {
-    --primary-color: #0000008f;
-    --secondary-color: #fff;
-    --hover-color: #f7543e48;
+    --primary-color: #0000007e;
+    --secondary-color: #ffffff;
+    --hover-color: #ff000096;
     --arrow-width: 10px;
     --arrow-stroke: 2px;
-    position: absolute;
     box-sizing: border-box;
     border: 0;
     border-radius: 30px;
@@ -40,14 +39,15 @@ header {
     align-items: center;
     gap: 0.6em;
     font-weight: bold;
-    position: absolute;
-    right: 220px;
-    top: 44px;
+    position: relative;
+    top: 6px;
+    left: 1750px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 17.5px;
     cursor: pointer;
     width: 140px;
+    margin-top: -35px;
 }
 .btnlogin .arrow-wrapper {
     display: flex;
@@ -84,7 +84,26 @@ header {
 .btnlogin:hover .arrow:before {
     right: 0;
 }
+.sobrenos{
+    position: relative;
+    color: rgb(255, 255, 255);
+    top: -2px;
+    left: 1500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0000007e;
+    cursor: pointer;
+    text-align: center;
+    width: 160px;
+    padding: 16px;
+    margin-top: -20px;
+    font-size: 17.5px;
+    letter-spacing: 1.5px;
+    border-radius: 30px;
 
+}
+.sobrenos:hover{
+    background-color: rgba(0, 0, 0, 0.788);
+}
 header::before {
     content: "";
     position: absolute;
@@ -215,9 +234,6 @@ button:hover{
     transform: translateX(5px);
 }
 .text{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.text:hover{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
