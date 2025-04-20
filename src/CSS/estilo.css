@@ -88,6 +88,7 @@ header {
     right: 0;
 }
 
+<<<<<<< HEAD
 
 .saibamais{
     position: absolute;
@@ -111,6 +112,8 @@ header {
 }
 
 
+=======
+>>>>>>> 881f84f9fc14385f59a0fddb0e88da00881dac5d
 /* btn login */
 .sobrenos {
     position: relative;
@@ -142,9 +145,12 @@ header {
 .sobrenos:hover .conteudo {
     display: block;
 }
+<<<<<<< HEAD
 .sobrenos:hover{
     background-color: rgba(0, 0, 0, 0.95);
 }
+=======
+>>>>>>> 881f84f9fc14385f59a0fddb0e88da00881dac5d
 .sobrenos .conteudo ul {
     list-style: none;         /* Remove os bullets */
     padding: 0;
@@ -314,3 +320,7 @@ button:hover{
     }
 
 }
+
+
+
+  
