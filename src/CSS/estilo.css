@@ -14,6 +14,7 @@ body{
     min-height: 100vh;
 }
 header {
+    background-image: url('../assets/imgprin.png');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -22,6 +23,32 @@ header {
     z-index: 1;
     display: block;
     justify-content: space-between;
+}
+
+/* nome da loja e destaque e reta */
+.nome{
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.destaque{
+    position: absolute;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    top: 160px;
+    left: 750px;
+}
+.reta{
+    background-color: black;
+    width: 420px;
+    height: 3px;
+    border-radius: 30px;
+    position: absolute;
+    top: 207px;
+    left: 730px;
 }
 
 /* btn login */
@@ -43,7 +70,7 @@ header {
     gap: 0.6em;
     font-weight: bold;
     position: relative;
-    top: 6px;
+    top: 18px;
     left: 1750px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 2px;
@@ -88,40 +115,114 @@ header {
     right: 0;
 }
 
-<<<<<<< HEAD
 
 .saibamais{
     position: absolute;
     top: 0px;
     right: -5px;
-    padding: 10px 20px; /* espaço interno para deixar elegante */
+    padding: 9px; /* espaço interno para deixar elegante */
     background-color: rgba(0, 0, 0, 0.4); /* fundo escuro e translúcido */
     border-radius: 15px; /* borda arredondada tipo etiqueta */
     font-weight: 300;
+    text-align: center;
     color: #fff;
     size: 20px;
-    width: auto;
-    display: inline-block;
+    width: 100px;
+    height: 40px;
     letter-spacing: 1px;
     cursor: pointer;
     font-size: bold;
 }
+.saibamais .descricao {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: -190px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 15px;
+    border-radius: 40px 10px 40px 10px;
+    color: white;
+    width: 280px;
+    padding: auto;
+    z-index: 10;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.saibamais:hover .descricao {
+    display: block;
+}
 .saibamais:hover{
-    background-color: rgba(0, 0, 0, 0.884);
-    
+    background-color: rgba(0, 0, 0, 0.95);
+}
+.saibamais .descricao a h1 {
+    list-style: none;         /* Remove os bullets */
+    padding: 0;
+    margin: 0;
+    text-align: center;       /* Centraliza os nomes */
+}
+.saibamais .descricao a h1 {
+    margin: 5px 0;            /* Espaçamento entre os nomes */
+    font-size: 16px;
 }
 
 
-=======
->>>>>>> 881f84f9fc14385f59a0fddb0e88da00881dac5d
-/* btn login */
+.saibamais2{
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    padding: 8px; /* espaço interno para deixar elegante */
+    background-color: rgba(0, 0, 0, 0.4); /* fundo escuro e translúcido */
+    border-radius: 15px; /* borda arredondada tipo etiqueta */
+    font-weight: 300;
+    justify-content: center;
+    color: #fff;
+    size: 20px;
+    width: 100px;
+    height: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: bold;
+}
+.saibamais2 .descricao2 {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: -410px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 15px;
+    border-radius: 40px 10px 40px 10px;
+    color: white;
+    width: 280px;
+    padding: auto;
+    z-index: 10;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.saibamais2:hover .descricao2 {
+    display: block;
+}
+.saibamais2:hover{
+    background-color: rgba(0, 0, 0, 0.95);
+}
+.saibamais2 .descricao2 a h1 {
+    list-style: none;         /* Remove os bullets */
+    padding: 0;
+    margin: 0;
+    text-align: center;       /* Centraliza os nomes */
+}
+.saibamais2 .descricao2 a h1 {
+    margin: 5px 0;            /* Espaçamento entre os nomes */
+    font-size: 16px;
+}
+
+
+/* btn sobre nos */
 .sobrenos {
     position: relative;
     color: rgb(255, 255, 255);
-    top: -2px;
+    top: 10px;
     left: 1500px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #0000007e;
+    background-color: #00000091;
     cursor: pointer;
     text-align: center;
     width: 160px;
@@ -135,7 +236,7 @@ header {
     position: absolute;
     top: 60px;
     right: -50px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgb(0, 0, 0);
     padding: 15px;
     border-radius: 10px;
     color: white;
@@ -145,12 +246,9 @@ header {
 .sobrenos:hover .conteudo {
     display: block;
 }
-<<<<<<< HEAD
 .sobrenos:hover{
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgb(0, 0, 0);
 }
-=======
->>>>>>> 881f84f9fc14385f59a0fddb0e88da00881dac5d
 .sobrenos .conteudo ul {
     list-style: none;         /* Remove os bullets */
     padding: 0;
@@ -208,6 +306,7 @@ main{
     border-radius: 30px;
     top: 130px;
 } 
+
 /* imagem produto */
 .imagemproduto{
     position: relative;
@@ -218,6 +317,13 @@ main{
     margin-bottom: 10px;
     border-radius: 15px 15px 0px 0px;
     z-index: -1;
+}
+
+/* botoes container */
+.container-button{
+    display: flex;
+    justify-content: center;
+
 }
 
 /* preco */
@@ -278,7 +384,6 @@ button:hover{
     z-index: 2;
     margin-left: -35px;
 }
-
 .button-wrapper:hover {
     background-color: #525252;
     transform: scale(1.05);
@@ -291,7 +396,6 @@ button:hover{
     align-items: center;
     transition: transform 0.3s ease;
 }
-
 .button-wrapper:hover .icon {
     transform: translateX(5px);
 }
@@ -316,11 +420,6 @@ button:hover{
     }
     aside{
         display: none;
-        
-    }
+ }
 
 }
-
-
-
-  
