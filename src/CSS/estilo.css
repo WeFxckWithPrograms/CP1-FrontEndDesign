@@ -7,6 +7,7 @@ body{
     background: #f4f4f4;
 }
 
+/* container e header */
 #container{
     display: flex;
     flex-direction: column;
@@ -22,13 +23,14 @@ header {
     display: block;
     justify-content: space-between;
 }
+
+/* btn login */
 .btnlogin {
-    --primary-color: #0000008f;
-    --secondary-color: #fff;
-    --hover-color: #f7543e48;
+    --primary-color: #0000007e;
+    --secondary-color: #ffffff;
+    --hover-color: #ff000096;
     --arrow-width: 10px;
     --arrow-stroke: 2px;
-    position: absolute;
     box-sizing: border-box;
     border: 0;
     border-radius: 30px;
@@ -40,14 +42,15 @@ header {
     align-items: center;
     gap: 0.6em;
     font-weight: bold;
-    position: absolute;
-    right: 220px;
-    top: 44px;
+    position: relative;
+    top: 6px;
+    left: 1750px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 17.5px;
     cursor: pointer;
     width: 140px;
+    margin-top: -35px;
 }
 .btnlogin .arrow-wrapper {
     display: flex;
@@ -85,6 +88,76 @@ header {
     right: 0;
 }
 
+
+.saibamais{
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    padding: 10px 20px; /* espaço interno para deixar elegante */
+    background-color: rgba(0, 0, 0, 0.4); /* fundo escuro e translúcido */
+    border-radius: 15px; /* borda arredondada tipo etiqueta */
+    font-weight: 300;
+    color: #fff;
+    size: 20px;
+    width: auto;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: bold;
+}
+.saibamais:hover{
+    background-color: rgba(0, 0, 0, 0.884);
+    
+}
+
+
+/* btn login */
+.sobrenos {
+    position: relative;
+    color: rgb(255, 255, 255);
+    top: -2px;
+    left: 1500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0000007e;
+    cursor: pointer;
+    text-align: center;
+    width: 160px;
+    padding: 16px;
+    font-size: 17.5px;
+    letter-spacing: 1.5px;
+    border-radius: 30px;
+}
+.sobrenos .conteudo {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -50px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    width: 250px;
+    z-index: 10;
+}
+.sobrenos:hover .conteudo {
+    display: block;
+}
+.sobrenos:hover{
+    background-color: rgba(0, 0, 0, 0.95);
+}
+.sobrenos .conteudo ul {
+    list-style: none;         /* Remove os bullets */
+    padding: 0;
+    margin: 0;
+    text-align: center;       /* Centraliza os nomes */
+}
+.sobrenos .conteudo li {
+    margin: 5px 0;            /* Espaçamento entre os nomes */
+    font-size: 16px;
+}
+
+
+/* header */
 header::before {
     content: "";
     position: absolute;
@@ -93,7 +166,6 @@ header::before {
     background: rgba(0, 0, 0, 0.4); /* escurece o fundo */
     z-index: -1;
 }
-
 header nav ul li a{
     color:#fff;
     text-transform: uppercase;
@@ -104,11 +176,12 @@ header nav ul li a:hover{
     text-decoration: underline 5px greenyellow;
 }
 
+/* conteudo */
 .conteudo{
     display: grid;
     grid-template-columns: 1fr 200px;
 }
-
+/* main */
 main{
     align-items: center;
     justify-content: center; /* centraliza os produtos */
@@ -116,6 +189,8 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
+
+/* produto */
 .produto{
     position: relative;
     width: 320px;
@@ -126,9 +201,8 @@ main{
     color:#fff;
     border-radius: 30px;
     top: 130px;
-}
-
-
+} 
+/* imagem produto */
 .imagemproduto{
     position: relative;
     max-width: 350px;
@@ -140,6 +214,7 @@ main{
     z-index: -1;
 }
 
+/* preco */
 .preco {
     position: absolute;
     top: 0px;
@@ -156,6 +231,7 @@ main{
     
 }
 
+/* botao */
 button{
     position: relative;
     color: white;
@@ -173,7 +249,6 @@ button:hover{
     color:#fff;
 
 }
-
 .button-wrapper {
     width: 550px;
     display: flex;
@@ -217,13 +292,9 @@ button:hover{
 .text{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.text:hover{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
 
 /* responsividade */
-
 @media(max-width:768px){
     header nav ul{
         display: flex;
